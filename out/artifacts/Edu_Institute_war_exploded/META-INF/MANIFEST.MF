@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: MacWolfstarr
+Build-Jdk: Amazon Corretto version 11.0.11
+Implementation-Title: Edu_Institute
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Main-Class: ${start-class}
+
