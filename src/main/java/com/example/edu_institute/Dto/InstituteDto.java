@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 public class InstituteDto {
 
-
     private Long id;
 
 

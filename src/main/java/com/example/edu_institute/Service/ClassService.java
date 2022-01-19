@@ -10,4 +10,5 @@ public interface ClassService {
     ResponseEntity<Object> UpdateClassInfo(ClassDto classDto);
     ResponseEntity<Object> SetAccess(ClassDto classDto);
     ResponseEntity<Object> GetTodayClass(ClassDto classDto);
+
 }

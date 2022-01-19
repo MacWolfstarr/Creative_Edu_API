@@ -28,11 +28,10 @@ public class ClassServiceImplement implements ClassService {
 
         ClassEntity classEntity = classRepository.SearchByClassId(classDto.getClassId(), classDto.getTeacherId());
 
-        if (classEntity != null) {
-
+        if (classEntity != null)
+        {
             return ResponseHandler.generateResponse(HttpStatus.OK, classEntity, Constants.SUCCESS);
         }
-
         return ResponseHandler.generateResponse(HttpStatus.MULTI_STATUS, null, Constants.FAILURE);
     }
 
@@ -42,7 +41,6 @@ public class ClassServiceImplement implements ClassService {
 
         ClassEntity classEntityCheck = classRepository.SearchByUniqueClassId(classDto.getUniqueClassId());
         try {
-
             if (classEntityCheck == null) {
                 ClassEntity classEntity = new ClassEntity();
                 classEntity.setClassId(classDto.getClassId());
@@ -69,15 +67,13 @@ public class ClassServiceImplement implements ClassService {
 
             return ResponseHandler.generateResponse(HttpStatus.MULTI_STATUS, Constants.FAILURE);
         }
-
-
     }
 
     @Override
     public ResponseEntity<Object> UpdateClassInfo(ClassDto classDto) {
 
 
-        ClassEntity classEntity = classRepository.SearchByClassId(classDto.getUniqueClassId(), classDto.getTeacherId());
+       ClassEntity classEntity = classRepository.SearchByClassId(classDto.getUniqueClassId(), classDto.getTeacherId());
 
         if (classEntity != null) {
 
@@ -102,9 +98,7 @@ public class ClassServiceImplement implements ClassService {
         List<ClassEntity> AllClasses = classRepository.SearchByTeacherId(classDto.getTeacherId());
 
         if (AllClasses != null) {
-
             return ResponseHandler.generateResponse(HttpStatus.OK, AllClasses, Constants.SUCCESS);
-
         }
         return ResponseHandler.generateResponse(HttpStatus.MULTI_STATUS, null, Constants.FAILURE);
     }
@@ -112,7 +106,6 @@ public class ClassServiceImplement implements ClassService {
 
     @Override
     public ResponseEntity<Object> SetAccess(ClassDto classDto) {
-
 
         ClassEntity classEntity = classRepository.SearchByClassId(classDto.getUniqueClassId(), classDto.getTeacherId());
 
@@ -133,7 +126,6 @@ public class ClassServiceImplement implements ClassService {
         List<ClassEntity> AllClasses = classRepository.SearchTodayClass(classDto.getTeacherId(), classDto.getYear(), classDto.getMonth(), classDto.getDay());
 
         if (AllClasses != null) {
-
             return ResponseHandler.generateResponse(HttpStatus.OK, AllClasses, Constants.SUCCESS);
         }
         return ResponseHandler.generateResponse(HttpStatus.MULTI_STATUS, null, Constants.FAILURE);

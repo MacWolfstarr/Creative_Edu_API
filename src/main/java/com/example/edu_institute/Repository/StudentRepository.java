@@ -12,7 +12,7 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository <StudentEntity, Long> {
 
     @Query("SELECT u FROM StudentEntity u WHERE u.studentId=:StudentId")
-    StudentEntity SearchByStudentId(@Param("StudentId") String StudentId);
+    StudentEntity SearchByStudentId(String StudentId);
 
     @Query("SELECT u FROM StudentEntity u WHERE u.studentId=:StudentId AND u.password=:Password")
     StudentEntity LoginStudent(String StudentId, String Password);

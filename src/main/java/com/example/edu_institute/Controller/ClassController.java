@@ -1,9 +1,6 @@
 package com.example.edu_institute.Controller;
-
-
 import com.example.edu_institute.Dto.ClassDto;
 import com.example.edu_institute.Dto.StudentClassInnerJoinDto;
-import com.example.edu_institute.Dto.StudentDto;
 import com.example.edu_institute.Dto.StudentHasClassDto;
 import com.example.edu_institute.Repository.StudentClassInnerJoinRepository;
 import com.example.edu_institute.Service.ClassService;
